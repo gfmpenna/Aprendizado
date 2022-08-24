@@ -1,12 +1,13 @@
 #include <iostream>
 #include "Jogo.h"
 #include "Banco.h"
+
 using namespace std;
 
 
 int main() {
 
-/*
+
     Jogo gow;
 
     gow.adquirir("Gow", 160.0f);
@@ -17,7 +18,8 @@ int main() {
 
     gow.jogar(4);
     gow.exibir();
-*/
+
+    cout << "_______" << endl;
 
     Banco itau;
 
@@ -25,7 +27,6 @@ int main() {
     itau.depositar(100.00f);
     itau.mostar();
     itau.sacar(298.00f);
-
 
 
     system("pause");

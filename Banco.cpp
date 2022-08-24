@@ -17,17 +17,16 @@ float Banco::depositar(float valor) {
     saldo += valor;
 }
 
-float Banco::sacar(float valor){
+float Banco::sacar(float valor) {
 
 
-    if(saldo < valor){
+    if (saldo < valor) {
 
         std::cout << "Saldo insuficiente" << std::endl;
 
-    }
-    else{
+    } else {
 
-        float result =  (saldo - valor);
+        float result = (saldo - valor);
         std::cout << "Saldo Atual: " << result << std::endl;
 
     }

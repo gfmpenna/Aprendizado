@@ -12,7 +12,6 @@ void Jogo::adquirir(const string &titulo, float valor) {
     horas = 0;
     custo = valor;
 
-
 }
 
 void Jogo::atualizar(float valor) {
