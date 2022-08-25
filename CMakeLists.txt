@@ -3,4 +3,4 @@ project(untitled1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled1 main.cpp Jogo.cpp Jogo.h Banco.cpp Banco.h)
+add_executable(untitled1 Source/main.cpp Source/Jogo.cpp Source/Helpers/Jogo.h Source/Banco.cpp Source/Helpers/Banco.h)

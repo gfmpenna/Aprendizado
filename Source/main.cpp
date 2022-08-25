@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Jogo.h"
-#include "Banco.h"
+#include "Helpers/Jogo.h"
+#include "Helpers/Banco.h"
 
 using namespace std;
 

@@ -2,7 +2,7 @@
 // Created by 55229 on 24/08/2022.
 //
 #include <iostream>
-#include "Jogo.h"
+#include "Helpers/Jogo.h"
 
 
 void Jogo::adquirir(const string &titulo, float valor) {
