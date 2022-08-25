@@ -41,8 +41,10 @@ public:
 
     int totalFor(int atk, int prec, int tx, int mtx, int vida, int def, int evas);
 
+    int calculacriticohit(int tx, int mtx);
 
-    void charGame();
+
+    void charShow();
 };
 
 

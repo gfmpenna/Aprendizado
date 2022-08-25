@@ -32,14 +32,15 @@ int main() {
 
     Damage player;
 
-    string nome;
-    int a, b, c, d, e, f, g, h,x,y;
+    string name;
+    int a, b, c, d, e, f, g, h, x, y;
 
 
     cout << "Informe o que se pede:" << endl;
+
     cout << " " << endl;
     cout << "|| Informe o Nome: ";
-    cin >> nome;
+    cin >> name;
     cout << "|| Informe o HP: ";
     cin >> a;
     cout << "|| Informe o MP: ";
@@ -61,24 +62,27 @@ int main() {
     cout << "|| Informe o MAX-TAXA: ";
     cin >> h;
 
-
-    //player.charGame(nome, a, b, c, d,x,y, e, f, g, h);
-    //player.charGame();
-
-
-    int alow = player.totalAtk(c,d,x,y);
-    int alow2 = player.totalDef(a,e,f);
-
-
-    cout << "" <<  endl;
-    cout << "Personagem: " << nome << endl;
-    cout << "" <<  endl;
-    cout << "Total Ataque: " << alow << endl;
     cout << "" << endl;
+
+
+    player.charGame(name, a, b, c, d, x, y, e, f, g, h);
+    player.charShow();
+
+
+    cout << "" << endl;
+    int alow = player.totalAtk(c, d, x, y);
+    int alow2 = player.totalDef(a, e, f);
+
+
+    cout << "" << endl;
+    cout << "Personagem: " << name << endl;
+    cout << "" << endl;
+    cout << "Total Ataque: " << alow << endl;
     cout << "Total Defesa: " << alow2 << endl;
-    cout << "" <<  endl;
+    cout << "" << endl;
 
 
+    player.calculacriticohit(g, h);
 
 
     system("pause");
