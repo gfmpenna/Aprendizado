@@ -25,7 +25,7 @@ int main() {
 
     itau.exibir("Guilherme", 195435, 199.00f);
     itau.depositar(100.00f);
-    itau.mostar();
+    itau.mostrar();
     itau.sacar(298.00f);
 
 

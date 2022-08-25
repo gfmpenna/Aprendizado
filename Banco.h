@@ -24,7 +24,7 @@ public:
 
     float sacar(float valor);
 
-    void mostar();
+    void mostrar();
 
 };
 

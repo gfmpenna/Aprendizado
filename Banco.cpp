@@ -15,6 +15,8 @@ void Banco::exibir(const string &titular, int conta, float valor) {
 float Banco::depositar(float valor) {
 
     saldo += valor;
+
+    return saldo;
 }
 
 float Banco::sacar(float valor) {
@@ -35,7 +37,7 @@ float Banco::sacar(float valor) {
 
 }
 
-void Banco::mostar() {
+void Banco::mostrar() {
 
     std::cout << "Dados Conta: " << nome << std::endl;
     std::cout << "Numero Conta/C: " << numConta << std::endl;
