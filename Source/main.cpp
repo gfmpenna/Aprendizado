@@ -65,15 +65,20 @@ int main() {
     cout << "" << endl;
 
 
-    player.charGame(name, a, b, c, d, x, y, e, f, g, h);
-    player.charShow();
+    //player.charGame(name, a, b, c, d, x, y, e, f, g, h);
+    //player.charShow();
 
 
     cout << "" << endl;
+
     int alow = player.totalAtk(c, d, x, y);
     int alow2 = player.totalDef(a, e, f);
+    int alow3 = player.totalFor(c,d,g,h,a,e,f,x,y);
 
+    int alow4 = player.calcCrit(g,h);
 
+    cout << alow4 << endl;
+    cout << alow3 << endl;
     cout << "" << endl;
     cout << "Personagem: " << name << endl;
     cout << "" << endl;

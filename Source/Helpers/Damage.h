@@ -39,7 +39,7 @@ public:
 
     int totalDef(int vida, int def, int eva);
 
-    int totalFor(int atk, int prec, int tx, int mtx, int vida, int def, int evas);
+    int totalFor(int atk, int prec, int tx, int mtx, int vida, int def, int evas, int dc, int amp);
 
     int calculacriticohit(int tx, int mtx);
 
