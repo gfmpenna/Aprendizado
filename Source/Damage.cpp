@@ -34,12 +34,7 @@ Damage::charGame(const string &nome, int vida, int mana, int atk, int prec, int 
 
 int Damage::totalAtk(int atk, int prec, int dc, int amp) {
 
-    ataque = atk;
-    precisao = prec;
-    danoCritico = dc;
-    amplificacao = amp;
-
-    int resultAtak = ((ataque + precisao) * (danoCritico + amplificacao)) / 1000;
+    int resultAtak = ((atk + prec) * (dc + amp)) / 1000;
 
     return resultAtak;
 }
@@ -47,21 +42,20 @@ int Damage::totalAtk(int atk, int prec, int dc, int amp) {
 
 int Damage::calcCrit(int tx, int mtx) {
 
-    taxa = tx;
-    maxtaxa = mtx;
 
-    if (taxa > maxtaxa) {
 
-        std::cout << "Aqui e a Max Taxa: " << maxtaxa << endl;
-        return maxtaxa;
+    if (tx > mtx) {
+
+        std::cout << "Aqui e a Max Taxa: " << mtx << endl;
+        return mtx;
 
     } else {
 
-        std::cout << "Aqui e a Taxa: " << taxa << endl;
-        return taxa;
+        std::cout << "Aqui e a Taxa: " << tx << endl;
+        return tx;
     }
 
-    taxa = Damage::calcCrit(tx, mtx);
+    tx = Damage::calcCrit(tx, mtx);
 
     int Temp = 0;
     int critou = 0;
@@ -74,7 +68,7 @@ int Damage::calcCrit(int tx, int mtx) {
 
             Temp = rand() % 100 + 1;
 
-            if (Temp <= taxa) {
+            if (Temp <= tx) {
 
                 critou++;
 
@@ -86,18 +80,12 @@ int Damage::calcCrit(int tx, int mtx) {
                  ((hp + defesa + evasao) * 2)) * 80 / 1000;
 
 
-    //cout << "Aqui é o calcCrit: "<< calc0 << endl;
-    //cout << "Aqui é o calcCrit: "<< critou << endl;
-
     return true;
 
 }
 
 int Damage::totalDef(int vida, int def, int eva) {
 
-    hp = vida;
-    defesa = def;
-    evasao = eva;
 
     int resultDef = (def + eva) * vida / 10000;
 
@@ -107,30 +95,18 @@ int Damage::totalDef(int vida, int def, int eva) {
 
 int Damage::totalFor(int atk, int prec, int tx, int mtx, int vida, int def, int evas, int dc, int amp) {
 
-    ataque = atk;
-    precisao = prec;
-    taxa = tx;
-    maxtaxa = mtx;
-    hp = vida;
-    defesa = def;
-    evasao = evas;
-    danoCritico = dc;
-    amplificacao = amp;
 
-    int calc0 = ((ataque * precisao) / 1000) + (((danoCritico + amplificacao) * 10) / (taxa / 2)) +
-                ((hp + defesa + evasao) * 2);
 
-    int resultFinal = calc0 * 80 / 1000;
+    int poderTotal = (((atk * prec) / 1000) + (((dc + amp) * 10) / (tx / 2)) +
+                 ((vida + def + evas) * 2)) * 80 / 1000;
 
-    //cout << resultFinal << endl;
-
-    return resultFinal;
+    return poderTotal;
 
 }
 
 int Damage::calculacriticohit(int tx, int mtx) {
 
-    taxa = Damage::calcCrit(tx, mtx);
+    tx = Damage::calcCrit(tx, mtx);
 
     int Temp = 0;
     int critou = 0;
@@ -144,7 +120,7 @@ int Damage::calculacriticohit(int tx, int mtx) {
 
             Temp = rand() % 100 + 1;
 
-            if (Temp <= taxa) {
+            if (Temp <= tx) {
 
                 critou++;
 
@@ -156,7 +132,7 @@ int Damage::calculacriticohit(int tx, int mtx) {
     }
 
     cout << "" << endl;
-    cout << "Taxa Atual na Hora dos Hits: " << taxa << endl;
+    cout << "Taxa Atual na Hora dos Hits: " << tx<< endl;
     cout << "" << endl;
     cout << "Bateu " << critou + naocritou << " Hits e Critou: " << critou << endl;
     cout << "Bateu " << critou + naocritou << " Hits e Nao Critou " << naocritou << endl;
@@ -164,6 +140,7 @@ int Damage::calculacriticohit(int tx, int mtx) {
 
     return true;
 }
+
 
 
 void Damage::charShow() {
