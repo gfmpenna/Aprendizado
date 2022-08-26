@@ -1,9 +1,8 @@
 //
 // Created by 55229 on 25/08/2022.
 //
-
 #include "Helpers/Damage.h"
-
+#include <ctime>
 /*
     string name;
     int hp;
@@ -15,8 +14,8 @@
     int taxa;
     int maxtaxa;
 */
-void
-Damage::charGame(const string &nome, int vida, int mana, int atk, int prec, int dc, int amp, int def, int evas, int tx,
+
+void Damage::charGame(const string &nome, int vida, int mana, int atk, int prec, int dc, int amp, int def, int evas, int tx,
                  int mtx) {
 
     name = nome;
@@ -133,6 +132,8 @@ int Damage::calculacriticohit(int tx, int mtx) {
 void Damage::charShow() {
 
 
+
+
     std::cout << "Nome Character: " << name << endl;
     std::cout << "HP: " << hp << endl;
     std::cout << "MP: " << mp << endl;
@@ -145,8 +146,3 @@ void Damage::charShow() {
 
 
 }
-
-
-
-
-

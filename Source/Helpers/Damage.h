@@ -43,8 +43,8 @@ public:
 
     int calculacriticohit(int tx, int mtx);
 
-
     void charShow();
+
 };
 
 
