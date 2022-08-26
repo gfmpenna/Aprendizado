@@ -35,13 +35,15 @@ public:
 
     int totalAtk(int atk, int prec, int dc, int amp);
 
-    int calcCrit(int tx, int mtx);
+    int critAtqueHit(int tx, int mtx);
 
     int totalDef(int vida, int def, int eva);
 
-    int totalFor(int atk, int prec, int tx, int mtx, int vida, int def, int evas, int dc, int amp);
+    int atakCriticoTotal(int atk, int prec, int tx, int mtx, int vida, int def, int evas, int dc, int amp);
 
-    int calculacriticohit(int tx, int mtx);
+    int atakNormalTotal(int atk, int prec, int tx, int mtx, int vida, int def, int evas, int dc, int amp);
+
+    int calculaCriticoHit(int tx, int mtx);
 
     void charShow();
 

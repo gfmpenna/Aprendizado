@@ -61,33 +61,38 @@ int main() {
     cin >> g;
     cout << "|| Informe o MAX-TAXA: ";
     cin >> h;
-
-    cout << "" << endl;
-
-
-    //player.charGame(name, a, b, c, d, x, y, e, f, g, h);
-    //player.charShow();
+    cout << "___________________________________________" << endl;
 
 
-    cout << "" << endl;
+    player.charGame(name, a, b, c, d, x, y, e, f, g, h);
+    player.charShow();
 
     int alow = player.totalAtk(c, d, x, y);
     int alow2 = player.totalDef(a, e, f);
-    int alow3 = player.totalFor(c,d,g,h,a,e,f,x,y);
+    int alow3 = player.atakCriticoTotal(c, d, g, h, a, e, f, x, y);
+    int alow4 = player.atakNormalTotal(c, d, g, h, a, e, f, x, y);
 
-    int alow4 = player.calcCrit(g,h);
 
-    cout << alow4 << endl;
-    cout << alow3 << endl;
-    cout << "" << endl;
-    cout << "Personagem: " << name << endl;
-    cout << "" << endl;
+
+
+
+
+
+
+
+    // Calculo de dano e Hits Critado e não Critado e o Total Somado
+    cout << "Ataque Total Critado: " << alow3 << endl;
+    cout << "Ataque Normal Total: " << alow4 << endl;
+    cout << "Dano Total Causado: " << alow3 + alow4 << endl;
+
+    cout << "___________________________________________" << endl;
     cout << "Total Ataque: " << alow << endl;
     cout << "Total Defesa: " << alow2 << endl;
-    cout << "" << endl;
 
+    cout << "___________________________________________" << endl;
+    player.calculaCriticoHit(g, h);
 
-    player.calculacriticohit(g, h);
+    cout << "___________________________________________" << endl;
 
 
     system("pause");
