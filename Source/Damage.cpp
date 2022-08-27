@@ -106,6 +106,7 @@ int Damage::atakCriticoTotal(int atk, int prec, int tx, int mtx, int vida, int d
     }
 
 
+
     return bateCritou * critou;
 
 }

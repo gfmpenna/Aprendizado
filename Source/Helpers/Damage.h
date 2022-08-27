@@ -6,15 +6,18 @@
 
 #include <iostream>
 #include <string>
+#include "Monster.h"
 
 using namespace std;
 
 
-class Damage {
+class Damage : Monster{
+
 
 private:
 
     string name;
+    //int level;
     int hp;
     int mp;
     int ataque;
@@ -24,9 +27,8 @@ private:
     int defesa;
     int evasao;
     int taxa;
-    int maxtaxa = 50;
+    int maxtaxa;
 
-    float danoMob;
 
 public:
 
@@ -46,6 +48,7 @@ public:
     int calculaCriticoHit(int tx, int mtx);
 
     void charShow();
+
 
 
 };

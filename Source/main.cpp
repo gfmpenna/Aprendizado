@@ -5,6 +5,9 @@
 
 using namespace std;
 
+void listachar();
+
+
 
 int main() {
 
@@ -29,6 +32,29 @@ int main() {
     itau.mostrar();
     itau.sacar(298.00f);
 */
+
+    //Damage player;
+    //Monster mob;
+
+    //mob.gameMob();
+
+
+    listachar();
+
+
+
+
+
+
+
+
+    system("pause");
+    return 0;
+}
+
+
+
+void listachar(){
 
     Damage player;
 
@@ -72,14 +98,6 @@ int main() {
     int alow3 = player.atakCriticoTotal(c, d, g, h, a, e, f, x, y);
     int alow4 = player.atakNormalTotal(c, d, g, h, a, e, f, x, y);
 
-
-
-
-
-
-
-
-
     // Calculo de dano e Hits Critado e não Critado e o Total Somado
     cout << "Ataque Total Critado: " << alow3 << endl;
     cout << "Ataque Normal Total: " << alow4 << endl;
@@ -94,7 +112,4 @@ int main() {
 
     cout << "___________________________________________" << endl;
 
-
-    system("pause");
-    return 0;
 }
