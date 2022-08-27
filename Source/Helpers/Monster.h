@@ -26,6 +26,10 @@ public:
 
     void gameMob(const string& name, const string& map,int nvM,int hpM,int atakM, int defM);
 
+    void mobDamage();
+
+
+
 
 
 
