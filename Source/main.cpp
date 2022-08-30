@@ -2,6 +2,7 @@
 #include "Helpers/Jogo.h"
 #include "Helpers/Banco.h"
 #include "Helpers/Damage.h"
+#include "Helpers/Monster.h"
 
 using namespace std;
 
@@ -34,9 +35,9 @@ int main() {
 */
 
     //Damage player;
-    //Monster mob;
+    Monster mob;
 
-    //mob.gameMob();
+    mob.gameMob(const string& name, const string& map,int nvM,int hpM,int atakM, int defM);
 
 
     listachar();
