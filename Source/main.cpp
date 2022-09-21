@@ -37,7 +37,7 @@ int main() {
     //Damage player;
     Monster mob;
 
-    mob.gameMob(const string& name, const string& map,int nvM,int hpM,int atakM, int defM);
+   // mob.gameMob(const string& name, const string& map,int nvM,int hpM,int atakM, int defM);
 
 
     listachar();
