@@ -42,13 +42,6 @@ int main() {
 
     listachar();
 
-
-
-
-
-
-
-
     system("pause");
     return 0;
 }
